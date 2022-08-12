@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link href="cal.css" rel="stylesheet" type="text/css">
+        <script>
+function calculate() {
+    let first = document.getElementById('first').value;
+    let operator = document.getElementById('operator');
+    let second = document.getElementById('second').value;
+    let answer;
+
+    if(operator.value == '+') {
+        answer = parseInt(first) + parseInt(second);
+    } else if (operator.value == '-') {
+       answer = first - second;
+    }
+    else if (operator.value == '*') {
+        answer = first * second;
+    }
+    else if (operator.value == '/'){
+        answer = first / second;
+    }
+
+    document.getElementById('answer').innerHTML = answer;
+}
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    </head>
+    <body>
+        First:<input type="text" id="first" name="first" />
+        <br/>
+        Operator:<input type="text" id="operator" name="operator" /> 
+        <br/>
+        Second:<input type="text" id="second" name="second" />
+
+        Answer:<div id="answer"></div>
+        <button type="button" onclick="calculate();">Calculate</button>
+        <!-- <div class="calculator">
+         <div class="output" > 
+            <div class="previous">
+                <div class="current"> 
+        <button class="span-two">AC</button>
+        <button>DEL</button>
+        <button id="plus">+</button>
+        <button>÷</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>-</button>
+        <button>*</button>
+        <button>.</button>
+        <button>0</button>
+        
+         </div>
+        </div>
+        </div>
+        </div> -->
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercise</title>
+        <script>
+            function  concatenate(){
+                let firstWord = document.getElementById ("firstWord").value;
+
+                let secondWord = document.getElementById ("secondWord").value;
+
+               let Sentence;
+
+               let answer = firstWord + " " + secondWord
+
+               document.getElementById("Sentence").innerHTML = answer ;
+
+            }
+            </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    </head>
+        <body style="background-color: rgb(253, 246, 246);">
+            <fieldset>
+                First Word: <input type="text" id="firstWord" name="firstWord"><br>&nbsp;
+                <p>Second Word: <input type="text" id="secondWord" name="secondWord"><br></p>
+
+
+                <button type="button" onclick="concatenate()">Concatenate</button><br>
+
+               <p> Sentence : <div id="Sentence"></div></p>
+            </fieldset>
+        </body>
+
+
+    
+</html>
